@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+/* Enkel CSS-reset */
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(bilder/background.jpg) fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.kontainer {
+    width: 1000px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+textarea {
+    width: 100%;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.49);
+    border-radius: 10px;
+    font-size: 30px;
+}
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+nav ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+nav li {
+    display: inline;
+    list-style-type: none;
+}
+nav li a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+nav li a:hover {
+    background: #128b62;
+}
+nav li .current {
+    color: #ffffff;
+}
+header {
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+nav {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 10px;
+}
+p {
+    font-size: 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+main {
+    margin-top: 100px;
+
+}
+button {
+    width: 120px;
+    height: 60px;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.52);
+    border-radius: 10px;
+}
+
+.kolumner {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    color: rgba(255, 255, 255, 0.53);
+
+}
+
+.info {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    color: rgba(255, 255, 255, 0.53);
+    background-color: rgba(255, 255, 255, 0.48);
+    padding: 20px;
+
+}
+main img {
+    width: 300px;
+    padding: 20px;
+}
