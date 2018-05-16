@@ -6,7 +6,6 @@
     <title>Träningsbloggen</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="kontainer">
         <header>

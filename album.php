@@ -34,19 +34,16 @@
                      }
                  }
                 session_destroy();
-
                  ?>
             <h2>Album</h2>
             <?php
                $directory = "uploads";
                $fileList= scandir($directory);
-
                foreach ($fileList as $file) {
                    if (!in_array($file ,array(".",".."))) {
                        echo "<a href=\"uploads/$file\"><img src=\"uploads/$file\"></a>";
                    }
                }
-
                        ?>
          </main>
          <footer>

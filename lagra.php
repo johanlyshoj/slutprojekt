@@ -13,20 +13,19 @@
     if (isset($_POST['inlagg'])) {
         $filnamn = "blogg.txt";
 
-
         // Öppna asnslutningen till textfilen
-        if (!$fil = fopen($filnamn, 'a')) {
+        if (!$fil = fopen($filnamn, 'a+')) {
             echo "Kan inte öppna fil ($filnamn)";
             exit;
         } else {
             echo "filen är öppen";
         }
 
-        // Ersätter /n med <br>
-        $texten = nl2br($_POST['inlagg'], false);
+        // laddar upp ifrån blogg.txt
+        $texten = $_POST['inlagg'];
 
         // Skriv text i textfilen
-        if (fwrite($fil, "<div class=\"inlagg\"><h4>" . date('h:i Y/m/d') . "</h4><p>" . $texten . " </p></div>") === FALSE) {
+        if (fwrite($fil, "<div class=\"inlagg\"><h4>" . date('h:i Y/m/d') . "</h4><p>" . $texten . " </p></div>\n") === FALSE) {
             echo "kan inte skriva till filen ($filnamn)";
             exit;
         } else {
@@ -48,5 +47,4 @@
     ?>
 
 </body>
-
 </html>

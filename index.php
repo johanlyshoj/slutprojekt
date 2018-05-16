@@ -15,39 +15,27 @@
                     <li><a href="formular.php">Formulär</a></li>
                     <li><a href="om_mig.php">Om mig</a></li>
                     <li><a href="album.php">Album</a></li>
-
                 </ul>
             </nav>
         </header>
         <main>
-
             <h2>Senaste uppläggen</h2>
             <?php
             $filnamn = "blogg.txt";
-
             //öppna anslutningen till textfilen
-            $handtag = fopen($filnamn, 'a+');
-
+            $handtag = fopen($filnamn, 'r');
             $rader = file($filnamn);
-
+            //vänder på inläggen så senaste hamnar högst upp
+            $raderBak = array_reverse($rader);
             //läs rad för rad i textfilen
-            foreach ($rader as $rad) {
-                echo"$rad";
+            foreach ($raderBak as $rad) {
+                echo "$rad";
             }
-
             //stäng alstutningen till textfieln
             fclose($handtag);
-
-
-
-
-
-
-
             ?>
         </main>
         <footer>
-
         </footer>
     </div>
 </body>
