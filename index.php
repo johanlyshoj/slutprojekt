@@ -22,11 +22,14 @@
             <h2>Senaste uppläggen</h2>
             <?php
             $filnamn = "blogg.txt";
+
             //öppna anslutningen till textfilen
             $handtag = fopen($filnamn, 'r');
-            $rader = file($filnamn);
+            $rader = file($filnamn, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
             //vänder på inläggen så senaste hamnar högst upp
             $raderBak = array_reverse($rader);
+
             //läs rad för rad i textfilen
             foreach ($raderBak as $rad) {
                 echo "$rad";

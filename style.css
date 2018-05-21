@@ -74,10 +74,19 @@ nav {
     background: rgba(255, 255, 255, 0.47);
     border-radius: 10px;
 }
-p {
-    font-size: 30px;
+.info p {
+    font-size: 15px;
     color: white;
     font-family: 'Roboto', sans-serif;
+    width: 250px;
+}
+.inlagg p {
+
+    font-size: 30px;
+}
+
+.inlagg h4 {
+    font-size: 30px;
 }
 main {
     margin-top: 100px;
@@ -100,9 +109,7 @@ button {
 }
 
 .info {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
+
     color: rgba(255, 255, 255, 0.53);
     background-color: rgba(255, 255, 255, 0.48);
     padding: 20px;
@@ -115,5 +122,12 @@ main img {
 
 main .inlagg{
     margin-bottom: 20px;
+
+}
+
+h4 {
+    text-align: center;
+
+
 
 }

@@ -23,6 +23,8 @@
 
         // laddar upp ifrån blogg.txt
         $texten = $_POST['inlagg'];
+        $texten = nl2br($texten);
+        $texten = trim(preg_replace('/\s+/', ' ', $texten));
 
         // Skriv text i textfilen
         if (fwrite($fil, "<div class=\"inlagg\"><h4>" . date('h:i Y/m/d') . "</h4><p>" . $texten . " </p></div>\n") === FALSE) {
